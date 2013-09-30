@@ -1,0 +1,2 @@
+# Do not include vendor/ under version control.
+vendor/
