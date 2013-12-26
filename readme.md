@@ -12,15 +12,15 @@ The name is just a mildly stupid pun - it's a daemon to help analyze code.
 Targeted Platforms
 ------------------
 
-I would like to support OS X, other *nix variants, and Windows 7.
+I would like to support OS X, other *nix variants, and Windows (7 at least,
+others if that works out).
 
-I have just discovered [appserver](http://www.appserver.io/), which I think
-should make it possible to write a daemon to do the heavy lifting, so we don't
-have to pay the price of re-parsing all relevant files on every load.
-
-Theoretically, appserver should work on Windows as well as the *nixes. In
-practice, I'm guessing I'll have to do some work to make that happen, since the
-docs say they haven't yet implemented Windows support.
+[ReactPHP](http://reactphp.org/) looks like a good way to write daemons on
+Windows and OS X without any custom extensions (the demo works without fuss on
+both of them, at least). The performance may be relatively poor, but for
+a single-user daemon, it probably doesn't need to be greased lightning.
+If it turns out unusably slow, libevent is supposed to speed it up and is
+available for Windows and *nixes.
 
 License
 -------
@@ -29,8 +29,8 @@ This project is copyright Nate Eagleson, 2013. Feel free to use it, but
 please do not package it for redistribution (or commercial purposes) until it
 actually does something useful.
 
-If this ever gets anywhere, the license will probably become something standard
-and meaningful.
+If this ever gets anywhere, the license will probably become something
+standard, meaningful, and open source. I tend to like BSD myself.
 
 About
 -----
@@ -38,8 +38,8 @@ About
 I have gone for years without intelligent auto-complete or jump-to-definition,
 relying mostly on grep and my memory to survive in complex codebases.
 
-However, I have recently rediscovered these wonderful tools of good autocompletion and
-jump-to-definition by way of  and
+However, I have recently rediscovered these wonderful tools of good
+autocompletion and jump-to-definition by way of Tern and
 [Jedi](http://jedi.jedidjah.ch/en/latest/).
 
 Sadly, my paying gigs tend to be for writing PHP. As an Emacser, I greatly
