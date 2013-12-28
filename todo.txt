@@ -1,6 +1,3 @@
-2013-12-25 Get a basic daemon sending dummy responses to requests for
-definition-location.
-
 2013-12-25 Make the response to definition-location be something useful
 (filename, line number, column number).
 
