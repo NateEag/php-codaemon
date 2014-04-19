@@ -9,18 +9,27 @@ the open for now, because I believe it's generally a better way to work.
 
 The name is just a mildly stupid pun - it's a daemon to help analyze code.
 
+I have not worked on this much at all, since I discovered early in the process
+that [ReactPHP](http://reactphp.org/) does not have support for waiting until a
+request ends. I was only using React as a portable daemon that would let me
+build up a complex data structure over multiple requests, and did not find any
+other cross-platform alternatives.
+
+I also discovered [emacs-eclim](https://github.com/senny/emacs-eclim), which
+in combination with Eclipse's PHP development tools should be usable to get
+decent PHP auto-completion and jump-to-definition, which reduced my interest in
+this project significantly. Running Eclipse in the background is annoying,
+because it's huge, but writing the bits of elisp needed to support PHP properly
+would be a much smaller undertaking than building this whole tool.
+
+I may come back to this someday, but I'm more likely to just spend the time
+getting emacs-eclim's PHP support up to snuff.
+
 Targeted Platforms
 ------------------
 
 I would like to support OS X, other *nix variants, and Windows (7 at least,
 others if that works out).
-
-[ReactPHP](http://reactphp.org/) looks like a good way to write daemons on
-Windows and OS X without any custom extensions (the demo works without fuss on
-both of them, at least). The performance may be relatively poor, but for
-a single-user daemon, it probably doesn't need to be greased lightning.
-If it turns out unusably slow, libevent is supposed to speed it up and is
-available for Windows and *nixes.
 
 License
 -------
@@ -38,8 +47,8 @@ About
 I have gone for years without intelligent auto-complete or jump-to-definition,
 relying mostly on grep and my memory to survive in complex codebases.
 
-However, I have recently rediscovered these wonderful tools of good
-autocompletion and jump-to-definition by way of Tern and
+However, I have recently rediscovered the glories of good
+autocompletion and jump-to-definition by way of [Tern](http://ternjs.net/) and
 [Jedi](http://jedi.jedidjah.ch/en/latest/).
 
 Sadly, my paying gigs tend to be for writing PHP. As an Emacser, I greatly
