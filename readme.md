@@ -1,5 +1,11 @@
-php-codaemon
-============
+php-codaemon [Abandoned]
+========================
+
+N.B.: This project is abandoned. I had barely begun to work on it when I
+discovered the tools I was stitching together weren't fit for purpose. At this
+point, if you want PHP intelligence in Emacs (or any other tool that's not a PHP
+IDE), I strongly recommend the 
+[php-language-server](https://github.com/felixfbecker/php-language-server) project.
 
 php-codaemon is an experimental stab at building a static-analysis daemon for
 PHP. It is meant to help give editors advanced intelligence when editing PHP.
